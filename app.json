@@ -15,7 +15,10 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMapsApiKey": "AIzaSyCvytuZ5vyDwX2oq5EGnO0ae1kYZdacJzw"
+      }
     },
     "android": {
       "adaptiveIcon": {

@@ -1,49 +1,23 @@
-import { ImageBackground, StyleSheet, Text, View } from 'react-native';
-import { AmaticSC_700Bold } from "@expo-google-fonts/amatic-sc";
-const image = { uri: "https://images.unsplash.com/photo-1548932134-3d7d765bece2?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"};
-import { useFonts } from "expo-font";
+import 'react-native-gesture-handler';
+import React from 'react';
+import {NavigationContainer} from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import DiscoverScreen from '../screens/DiscoverScreen';
+import Home from '../screens/Home';
+import HikingScreen from '../screens/HikingScreen';
 
-export default function App() {
-  const [fontsLoaded] = useFonts({
-    AmaticSC_700Bold,
-  });
+const Stack = createNativeStackNavigator();
 
-  if(!fontsLoaded){
-    return <Text>Loading...</Text>;
-  }
-
+const App = () => {
   return (
-    <View style={styles.container}>
-      <ImageBackground source={image} style={styles.image}>
-        <Text style={styles.titleText}>NOMAD</Text>
-        <Text style={styles.buttonText}>Explore</Text>
-      </ImageBackground>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{headerShown: false}}>
+        <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Discover" component={DiscoverScreen} />
+        <Stack.Screen name='Hiking' component={HikingScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-  },
-  image: {
-    flex: 1,
-    resizeMode: 'cover',
-    justifyContent: 'center',
-  },
-  titleText: {
-    color: 'ivory',
-    fontSize: 152,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontFamily: 'AmaticSC_700Bold',
-  },
-  buttonText: {
-    color: 'ivory',
-    fontSize: 32,
-    fontWeight: 'bold',
-    textAlign: 'center',
-    fontFamily: 'AmaticSC_700Bold',
-  }
-});
+export default App;
