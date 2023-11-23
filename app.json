@@ -18,7 +18,8 @@
       "supportsTablet": true,
       "config": {
         "googleMapsApiKey": "GOOGLE_MAPS_API"
-      }
+      },
+      "bundleIdentifier": "com.greasonek.nomadnative"
     },
     "android": {
       "adaptiveIcon": {
@@ -31,6 +32,15 @@
     },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "b1e71d93-0581-4914-9cdc-982d1e768dfa"
+      }
+    },
+    "owner": "greasonek"
   }
 }

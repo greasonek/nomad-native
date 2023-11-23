@@ -51,6 +51,8 @@ const Home = ({navigation})  => {
               <MenuOption onSelect={() => navigation.navigate('Discover')} text='Explore'/>
               <MenuOption onSelect={() => navigation.navigate('Hiking')} text='Hiking'/>
               <MenuOption onSelect={() => navigation.navigate('Camping')} text='Camping'/>
+              <MenuOption onSelect={() => navigation.navigate('Airbnb')} text='Airbnb'/>
+
             </MenuOptions>
           </Menu>
         <Icon name='person' size={28} color='#0096c7'/>

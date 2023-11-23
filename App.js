@@ -9,6 +9,7 @@ import TrailDetailsScreen from './screens/TrailDetailsScreen';
 import CampingScreen from './screens/CampingScreen';
 import CampDetailsScreen from './screens/CampDetailsScreen';
 import ProfileScreen from './screens/ProfileScreen';
+import AirbnbScreen from './screens/AirbnbScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -24,6 +25,7 @@ const App = () => {
         <Stack.Screen name="Camping" component={CampingScreen}/>
         <Stack.Screen name="CampingDetails" component={CampDetailsScreen}/>
         <Stack.Screen name="Profile" component={ProfileScreen}/>
+        <Stack.Screen name="Airbnb" component={AirbnbScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

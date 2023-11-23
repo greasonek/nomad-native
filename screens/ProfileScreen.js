@@ -1,13 +1,12 @@
-import React from 'react'
+import React, { createContext, useState } from 'react'
 import {SafeAreaView, Text, View, StyleSheet} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import * as Haptics from 'expo-haptics';
 
+const Favorites = createContext();
+
 const ProfileScreen = ({navigation}) => {
 
-const TripsTrailCard = ({trail, campsite}) => {
-  return
-}
 
 const TripsCampCard = ({trail, campsite}) => {
   return

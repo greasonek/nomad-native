@@ -22,7 +22,8 @@ const CampingScreen = ({navigation}) => {
 
 const CampingCard = ({campsite}) => {
   return (
-    <TouchableOpacity activeOpacity={0.8} 
+    <TouchableOpacity 
+      activeOpacity={0.8} 
       onPress={()=>navigation.navigate('CampingDetails', campsite)}
       onPressIn={() => Haptics.selectionAsync(Haptics.ImpactFeedbackStyle.Heavy)}>
       <ImageBackground source={campsite.image} style={style.cardImage}>
